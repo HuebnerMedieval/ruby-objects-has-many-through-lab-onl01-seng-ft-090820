@@ -8,6 +8,13 @@ class Genre
     @@all << self
   end
   
+  def songs
+    Song.all.select {|song| song.genre = self}
+  end
+  
+  def artists
+    self.songs.select {}
+  
   def self.all
     @@all
   end
